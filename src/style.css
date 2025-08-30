@@ -1,0 +1,4 @@
+@import "bootstrap/scss/bootstrap.scss";
+@import "styles.less";
+@import "slick/slick.less";
+@import "slick/slick-theme.less";
