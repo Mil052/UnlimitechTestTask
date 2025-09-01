@@ -1,3 +1,163 @@
-body {
-  background-color: lightcyan;
+
+@tablet: ~"(min-width: 640px)";
+@desktop-small: ~"(min-width: 1024px)";
+@desktop-large: ~"(min-width: 1496px)";
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  background: none;
+  border: none;
+}
+
+.limit-width {
+  max-width: 1400px;
+  margin-inline: 1rem;
+
+  @media @tablet {
+    margin-inline: 3rem;
+  }
+
+  @media @desktop-large {
+    margin-inline: auto;
+  }
+}
+
+.section {
+  .limit-width();
+}
+
+#navigation {
+  margin-block: 2.5rem;
+}
+
+.nav--icon-link {
+  border: 1px solid black;
+  border-radius: 50%;
+  a {
+    display: block;
+    padding: 8px;
+
+    img {
+      display: block;
+    }
+  }
+}
+
+#intro .intro-carousel__item {
+  height: 520px;
+}
+
+.gallery {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-auto-rows: 250px;
+
+  @media @tablet {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+
+    .gallery--item-lg {
+      grid-row: span 2;
+    }
+  }
+
+  @media @desktop-small {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 250px auto 250px;
+  }
+}
+
+.promoted-header {
+  display: flex;
+}
+
+.discount-banner__layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+// Footer
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 30px;
+}
+
+#footer-navigation  {
+  grid-column: 1 / span 5;
+
+  .accordion-header__screen-title {
+    display: none;
+  }
+
+  @media @tablet {
+    grid-column: 1 / span 3;
+  }
+
+  @media @desktop-small {
+    grid-column: 1 / span 4;
+    display: grid;
+    grid-template-columns: subgrid;
+
+    .accordion-collapse {
+    display: block;
+    transition: none;
+    }
+    .accordion-button {
+      display: none;
+    }
+    .accordion-header__screen-title {
+      display: block;
+      padding: var(--bs-accordion-btn-padding-y) var(--bs-accordion-btn-padding-x);
+      font-size: 1rem;
+      color: var(--bs-accordion-btn-color);
+    }
+  }
+}
+
+#footer-address {
+  grid-column: span 5;
+
+  @media @tablet {
+    grid-column: 4 / span 2;
+  }
+
+  @media @desktop-small {
+    grid-column: 5 / span 1;
+  }
+}
+
+.payment-delivery {
+  grid-column: 1 / span 4;
+}
+
+.payment-delivery-list {
+  display: flex;
+  gap: 12px;
+}
+
+.payment-delivery__option {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 68px;
+  height: 2rem;
+  border: 1px solid black;
+}
+
+.social-media {
+  display: flex;
+  gap: 20px;
 }
