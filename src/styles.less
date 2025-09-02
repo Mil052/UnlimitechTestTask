@@ -1,7 +1,15 @@
-
 @tablet: ~"(min-width: 640px)";
 @desktop-small: ~"(min-width: 1024px)";
 @desktop-large: ~"(min-width: 1496px)";
+
+:root {
+  --blue-main: #0068FF;
+  --font-paragraph: "Inter", sans-serif;
+}
+
+html, body {
+  font-family: var(--font-paragraph);
+}
 
 ul {
   list-style: none;
@@ -11,6 +19,7 @@ ul {
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 button {
@@ -35,8 +44,40 @@ button {
   .limit-width();
 }
 
+#info-bar {
+  background-color: var(--blue-main);
+  padding-block: 9px;
+
+  .info__list {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    color: white;
+    font-size: 13px;
+
+    & li + li:before {
+      content: "|";
+      margin-right: 4rem;
+    }
+  }
+}
+
+// Header Navigation
+
 #navigation {
   margin-block: 2.5rem;
+
+  #offcanvasNavbarBackBtn.hide {
+    display: none;
+  }
+
+  .offcanvas-body {
+    position: relative;
+    @media (min-width: 1400px) {
+      position: static;
+    }
+  }
+  
 }
 
 .nav--icon-link {
@@ -51,6 +92,88 @@ button {
     }
   }
 }
+
+#categories {
+  #categories__menu {
+    position: absolute;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding: 8px;
+    border: 1px solid black;
+    background-color: beige;
+
+    &.hide {
+      display: none;
+    }
+
+    .categories__menu-layout {
+      display: grid;
+      grid-template-columns: 332px 1fr;
+      background-color: beige;
+    }
+
+    #categories__submenu {
+      display: flex;
+      justify-content: space-between;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: aqua;
+
+      @media (min-width: 1400px) {
+        position: static;
+        height: auto;
+      }
+
+      &.mobile-hide {
+        display: none;
+
+        @media (min-width: 1400px) {
+          display: flex;
+        }
+      }
+
+      .categories__submenu-img {
+        display: none;
+
+        @media (min-width: 1400px) {
+          display: block;
+        }
+      }
+
+      .category-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    
+
+    @media (min-width: 1400px) {
+      top: 100%;
+      height: auto;
+    }
+  }
+}
+
+
+
+
+.nav-social-media {
+  display: flex;
+  gap: 10px;
+}
+
+
+
+
+
+// Intro Carousel
 
 #intro .intro-carousel__item {
   height: 520px;

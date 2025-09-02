@@ -8,56 +8,143 @@
   </head>
   <body>
     <div id="info-bar">
-
+      <ul class="info__list">
+        <li>
+          <a href="tel:+48000000000">(+48) 000 000 000</a>
+        </li>
+        <li>
+          <a href="mailto:sklep@kontakt.com.pl">Napisz do nas!</a>
+        </li>
+        <li>
+          Darmowa dostawa
+        </li>
+        <li>
+          30 Dni na darmowy zwrot
+        </li>
+      </ul>
     </div>
     <div>
       <!-- Main Navigation -->
-      <header class="section" id="navigation">
-        <nav class="navbar navbar-expand-lg">
+      <header class="section">
+        <nav class="navbar navbar-expand-xxl" id="navigation">
           <div class="container-fluid">
+            <!-- Nav Logo -->
             <a class="navbar-brand" href="#">
               <img src="/unlimitech_logo.svg" alt="Unlimitech Logo">
             </a>
-            <!-- Mobile Nav Button -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <!-- Navigation Links -->
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Damskie buty skórzane
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                  </ul>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">Bony podarunkowe</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Nowości</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link">Bestsellery</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link">Wyprzedaż</a>
-                </li>
-              </ul>
-              <!-- Search form -->
-              <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-                <button class="btn btn-outline-success" type="submit">Search</button>
-              </form>
+            <!-- Navigation Links | Offcanvas Bootstrap -->
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+              <!-- Mobile Nav header -->
+              <div class="offcanvas-header">
+                <button type="button" id="offcanvasNavbarBackBtn" class="hide">&lt;</button>
+                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+              <!-- Nav body -->
+              <div class="offcanvas-body">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                  <!-- Categories Menu -->
+                  <li class="nav-item" id="categories">
+                    <button class="nav-link dropdown-toggle" id="categories__toggle-btn">
+                      Damskie buty skórzane
+                    </button>
+                    <div class="hide" id="categories__menu">
+                      <div class="categories__menu-layout">
+                        <ul class="categories__menu-list">
+                          <li class="categories__expandable-category">
+                            <button class="dropdown-item open-category-button">
+                              Półbuty
+                            </button>
+                            <template class="category-list-template">
+                              <ul class="category-list">
+                                <li><a href="#">półbuty płaskie</a></li>
+                                <li><a href="#">półbuty sznurowane</a></li>
+                                <li><a href="#">półbuty wiosenne</a></li>
+                                <li><a href="#">półbuty ażurowe</a></li>
+                              </ul>
+                            </template>
+                          </li>
+                          <li><a class="dropdown-item" href="#">Jazzówki</a></li>
+                          <li><a class="dropdown-item" href="#">Czółenka</a></li>
+                          <li><a class="dropdown-item" href="#">Baleriny</a></li>
+                          <li class="categories__expandable-category">
+                            <button class="dropdown-item open-category-button">
+                              Sandały
+                            </button>
+                            <template class="category-list-template">
+                              <ul class="category-list">
+                                <li><a href="#">sandały płaskie</a></li>
+                                <li><a href="#">sandały trekkingowe</a></li>
+                                <li><a href="#">sandały na koturnie</a></li>
+                                <li><a href="#">sandały na szpilce</a></li>
+                              </ul>
+                            </template>
+                          </li>
+                          <li><a class="dropdown-item" href="#">Klapki</a></li>
+                          <li class="categories__expandable-category">
+                            <button class="dropdown-item open-category-button">
+                              Botki
+                            </button>
+                            <template class="category-list-template">
+                              <ul class="category-list">
+                                <li><a href="#">sztyblety</a></li>
+                                <li><a href="#">botki na obcasie</a></li>
+                                <li><a href="#">botki płaskie</a></li>
+                                <li><a href="#">botki kowbojki</a></li>
+                                <li><a href="#">botki na słupku</a></li>
+                                <li><a href="#">botki na szpilce</a></li>
+                                <li><a href="#">botki sznurowane</a></li>
+                                <li><a href="#">botki ocieplane</a></li>
+                                <li><a href="#">workery</a></li>
+                                <li><a href="#">botki jesienne</a></li>
+                                <li><a href="#">botki dziurkowane</a></li>
+                                <li><a href="#">botki zimowe</a></li>
+                                <li><a href="#">botki wiosenne</a></li>
+                                <li><a href="#">botki na koturnie</a></li>
+                              </ul>
+                            </template>
+                          </li>
+                          <li><a class="dropdown-item" href="#">Kozaki</a></li>
+                          <li><a class="dropdown-item" href="#">Pokaż wszystkie</a></li>
+                        </ul>
+                        <!-- Categories Submenu -->
+                        <div class="mobile-hide" id="categories__submenu">
+                          <div id="categories__submenu-container">
+                            <!-- Category Submenu Placeholder -->
+                          </div>
+                          <div class="categories__submenu-img">
+                            <img src="/menu-image.webp" alt="buty damskie">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  
+                  <!-- Nav Links -->
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Bony podarunkowe</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Nowości</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link">Bestsellery</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link">Wyprzedaż</a>
+                  </li>
+                </ul>
+              </div>
             </div>
+            <!-- Search form -->
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
             <!-- User Panel Icons Navigation -->
             <div>
-              <ul class="navbar-nav">
+              <ul class="nav-social-media">
                 <li class="nav--icon-link">
                   <a href="#"><img src="/icons/user.svg" alt="user icon"></a>
                 </li>
@@ -69,6 +156,10 @@
                 </li>
               </ul>
             </div>
+            <!-- Mobile Nav Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation" id="offcanvasNavbarToggleBtn">
+              <span class="navbar-toggler-icon"></span>
+            </button>
           </div>
         </nav>
       </header>
