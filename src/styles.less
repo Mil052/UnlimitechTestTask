@@ -1,4 +1,5 @@
 @import "navbar-styles.less";
+@import "intro-styles.less";
 
 @tablet: ~"(min-width: 640px)";
 @desktop-small: ~"(min-width: 1024px)";
@@ -47,6 +48,16 @@ button {
 
 .section {
   .limit-width();
+  margin-bottom: 4rem;
+}
+
+.btn-outline_light {
+  color: white;
+  font-size: 14px;
+  padding-inline: 1rem;
+  padding-block: 10px;
+  border: 1px solid white;
+  border-radius: 8px;
 }
 
 #info-bar {
@@ -78,9 +89,7 @@ button {
 
 // Intro Carousel
 
-#intro .intro-carousel__item {
-  height: 520px;
-}
+
 
 .gallery {
   display: grid;

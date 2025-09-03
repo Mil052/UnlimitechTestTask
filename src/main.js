@@ -23,7 +23,7 @@ $( () => {
 
   let activeMenuLevel = 1;
 
-  // reset mobile menu on opening
+  // Reset mobile menu on opening
   offcanvasNavbarToggleBtn.on("click", function() {
     activeMenuLevel = 1;
     categoriesMenu.addClass("hide");
@@ -95,6 +95,16 @@ $( () => {
     autoplay: true,
     infinite: true,
     dots: true,
+    arrows: true,
+    appendArrows: $("#intro-carousel-controls"),
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          arrows: false,
+        }
+      }
+    ]
   });
 
   // Initializing Slick Slider

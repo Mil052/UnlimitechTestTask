@@ -1,0 +1,54 @@
+#intro {
+  position: relative;
+  padding-bottom: 2rem;
+
+  .intro-carousel {
+    padding-bottom: 2rem;
+
+    .intro-carousel__item {
+      height: 520px;
+      padding: 3rem;
+      border-radius: 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+      align-items: start;
+      color: white;
+      gap: 12px;
+
+      @media @desktop-small {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: end;
+      }
+
+      .intro__content {
+        max-width: 615px;
+
+        p {
+          margin: 0;
+          font-weight: 400;
+        }
+
+        h2 {
+          font-size: 40px;
+        }
+      }
+    }
+  }
+
+  #intro-carousel-controls {
+    .slick-prev {
+      left: 3rem;
+      width: 2rem;
+      height: 2rem;
+    }
+
+    .slick-next {
+      right: 3rem;
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+
+}
