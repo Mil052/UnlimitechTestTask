@@ -1,7 +1,20 @@
+@import "navbar-styles.less";
 
 @tablet: ~"(min-width: 640px)";
 @desktop-small: ~"(min-width: 1024px)";
 @desktop-large: ~"(min-width: 1496px)";
+
+:root {
+  --blue-main: #0068FF;
+  --light-grey: #FAFAFA;
+  --grey-stroke: #E3E3E3;
+  --light-grey-secondary: #F6F6F6;
+  --font-paragraph: "Inter", sans-serif;
+}
+
+html, body {
+  font-family: var(--font-paragraph);
+}
 
 ul {
   list-style: none;
@@ -11,6 +24,7 @@ ul {
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 button {
@@ -35,22 +49,34 @@ button {
   .limit-width();
 }
 
-#navigation {
-  margin-block: 2.5rem;
-}
+#info-bar {
+  background-color: var(--blue-main);
+  padding-block: 9px;
 
-.nav--icon-link {
-  border: 1px solid black;
-  border-radius: 50%;
-  a {
-    display: block;
-    padding: 8px;
+  .info__list {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    color: white;
+    font-size: 13px;
 
-    img {
-      display: block;
+    li:not(:first-child)::before {
+      content: "|";
+      margin-right: 4rem;
+    }
+
+    .tablet-hide {
+      display: none;
+      @media @desktop-small {
+        display: block;
+      }
     }
   }
+
+
 }
+
+// Intro Carousel
 
 #intro .intro-carousel__item {
   height: 520px;

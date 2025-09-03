@@ -8,56 +8,343 @@
   </head>
   <body>
     <div id="info-bar">
-
+      <ul class="info__list">
+        <li>
+          <a href="tel:+48000000000">(+48) 000 000 000</a>
+        </li>
+        <li class="tablet-hide">
+          <a href="mailto:sklep@kontakt.com.pl">Napisz do nas!</a>
+        </li>
+        <li class="tablet-hide">
+          Darmowa dostawa
+        </li>
+        <li class="tablet-hide">
+          30 Dni na darmowy zwrot
+        </li>
+      </ul>
     </div>
     <div>
       <!-- Main Navigation -->
-      <header class="section" id="navigation">
-        <nav class="navbar navbar-expand-lg">
-          <div class="container-fluid">
-            <a class="navbar-brand" href="#">
+      <header class="section">
+        <nav class="navbar navbar-expand-xxl" id="navigation">
+          <div class="navigation__container">
+            <!-- Nav Logo -->
+            <a class="brand" href="#">
               <img src="/unlimitech_logo.svg" alt="Unlimitech Logo">
             </a>
-            <!-- Mobile Nav Button -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <!-- Navigation Links -->
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Damskie buty skórzane
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                  </ul>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">Bony podarunkowe</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Nowości</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link">Bestsellery</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link">Wyprzedaż</a>
-                </li>
-              </ul>
-              <!-- Search form -->
-              <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-                <button class="btn btn-outline-success" type="submit">Search</button>
-              </form>
+            <!-- Navigation Links | Offcanvas Bootstrap -->
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+              <!-- Mobile Nav header -->
+              <div class="offcanvas-header">
+                <button type="button" id="offcanvasNavbarBackBtn" class="hide">
+                  <svg width="7" height="11" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M5.53201 10.196L0.000459163 5.1032L5.53163 1.13864e-05L6.19141 0.715117L1.43613 5.10244L6.19103 9.48019L5.53201 10.196Z" fill="#292929"/>
+                  </svg>
+                </button>
+                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+              <!-- Nav body -->
+              <div class="offcanvas-body">
+                <ul class="navbar-nav navigation-menu">
+
+                  <!-- Categories Menu -->
+                  <li class="nav-item" id="categories">
+                    <button class="nav-link dropdown-toggle" id="categories__toggle-btn">
+                      Damskie buty skórzane
+                    </button>
+                    <div class="hide" id="categories__menu">
+                      <div class="categories__menu-layout">
+                        <ul class="categories__menu-list">
+                          <li class="categories__list-item categories__expandable-category">
+                            <button class="dropdown-item open-category-button">
+                              <svg width="33" height="18" viewBox="0 0 33 18" fill="none" xmlns="http://www.w3.org/2000/svg" class="category-item-icon">
+                                <g>
+                                  <path d="M20.8291 8.92661C20.8291 8.92661 21.9391 9.37061 25.7131 9.18461C29.4871 9.00461 29.9851 8.27861 29.9851 8.27861C29.9851 8.27861 31.2931 8.52461 30.8671 9.57461C30.5371 10.3846 26.5291 12.7066 23.0611 12.6046C19.5991 12.5026 15.3451 11.4946 12.6991 11.2726C10.0531 11.0506 1.79708 10.9726 1.16108 10.3546C0.525081 9.73661 0.447081 8.92061 0.663081 7.36661C0.879081 5.81261 1.73708 4.27661 1.73708 4.27661C1.73708 4.27661 4.76108 6.04661 9.53108 6.97661C14.3011 7.90661 16.1551 8.21861 16.1551 8.21861" stroke-width="0.8" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                  <path d="M18.2782 2.45261L15.7402 9.73661L20.4442 10.2946C20.4442 10.2946 21.1582 7.85861 21.3262 6.85061C21.4942 5.84261 21.4642 4.93061 21.4642 4.93061L18.2782 2.45261Z" stroke-width="0.8" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                  <path d="M21.6152 5.53061C21.6152 5.53061 23.1812 6.53861 24.5132 6.80861C25.8452 7.07861 29.0732 7.40261 29.0732 7.40261" stroke-width="0.8" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                  <path d="M17.8415 2.5786L16.1075 1.1626C16.1075 1.1626 14.1635 3.5806 14.7875 4.9006C15.4115 6.2206 16.4375 7.0966 16.4375 7.0966" stroke-width="0.8" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                  <path d="M16.4378 7.09059C16.4378 7.09059 10.2518 5.97459 7.08977 4.94859C3.92777 3.92259 2.80577 3.01059 2.13377 3.28659C1.46177 3.56259 1.73777 4.28259 1.73777 4.28259" stroke-width="0.8" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                  <path d="M21.2188 7.7026C21.2188 7.7026 24.7887 8.1586 26.5527 7.8406C28.3167 7.5286 29.0427 7.4266 29.5587 7.2946C30.0747 7.1626 30.4407 7.8226 30.1167 8.2306" stroke-width="0.8" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                  <path d="M0.621094 10.4446L0.825094 16.0186C0.825094 16.0186 1.91109 16.4566 5.26509 16.6546C8.61909 16.8526 10.0231 16.1386 10.0231 16.1386L9.95109 14.1826C9.95109 14.1826 12.0871 14.3986 13.5631 14.5306C15.0391 14.6566 16.9771 15.0646 16.9771 15.0646L17.0191 16.2946C17.0191 16.2946 20.9071 16.8346 25.2031 16.5466C29.4991 16.2526 31.9771 13.0426 31.9771 13.0426C31.9771 13.0426 31.9111 11.2906 31.7491 10.5466C31.5871 9.80261 30.8611 9.58661 30.8611 9.58661" stroke-width="0.8" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                  <path d="M0.65625 11.4466C0.65625 11.4466 1.28625 11.9986 5.42025 12.1606C9.55425 12.3226 10.8262 12.0826 13.5862 12.4786C16.3462 12.8746 20.7862 13.8106 23.8102 13.7026C26.8342 13.5946 28.9522 12.5146 29.9662 12.0346C30.9802 11.5546 31.5142 10.6906 31.5142 10.6906" stroke-width="0.4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                </g>
+                              </svg>
+                              <span>Półbuty</span>
+                            </button>
+                            <template class="category-list-template">
+                              <ul class="category-list">
+                                <li><a href="#">półbuty płaskie</a></li>
+                                <li><a href="#">półbuty sznurowane</a></li>
+                                <li><a href="#">półbuty wiosenne</a></li>
+                                <li><a href="#">półbuty ażurowe</a></li>
+                              </ul>
+                            </template>
+                          </li>
+                          <li class="categories__list-item categories__expandable-category">
+                            <button class="dropdown-item open-category-button">
+                              <svg width="36" height="37" viewBox="0 0 36 37" fill="none" xmlns="http://www.w3.org/2000/svg" class="category-item-icon">
+                                <g>
+                                  <path d="M3.15568 13.6286C3.65968 13.0886 6.64168 16.3346 9.89368 16.1006C13.1457 15.8666 15.2397 11.8886 16.5237 11.9966C18.1797 12.1346 22.3917 17.3846 25.9017 17.8226C29.4117 18.2606 33.7797 18.3326 34.1157 20.6426C34.2417 21.5066 26.0637 24.3506 20.5377 23.7806C15.5697 23.2706 13.8477 22.7366 10.7457 22.6166C7.64368 22.4966 3.49168 23.1206 2.87968 21.8486C2.26768 20.5766 1.94968 19.7426 2.14168 17.8286C2.33368 15.9146 2.77168 14.0006 3.15568 13.6286Z" stroke-width="0.8" stroke-miterlimit="10"/>
+                                  <path d="M2.87891 21.8486L2.90891 25.1666H10.9609V23.8586C10.9609 23.8586 12.4429 23.8946 18.1069 24.7286C27.7789 26.1506 34.4449 22.0106 34.4449 22.0106V20.6006L33.3469 21.3266" stroke-width="0.8" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                  <path d="M12.2988 22.7246C12.2988 22.7246 14.9868 18.4166 21.7728 19.1426C22.0488 16.7306 22.0608 15.9926 22.0608 15.9926" stroke-width="0.4" stroke-miterlimit="10" stroke-linecap="round"/>
+                                  <path d="M16.6562 14.2346L17.7002 12.7406" stroke-width="0.8" stroke-miterlimit="10" stroke-linecap="round"/>
+                                  <path d="M18.4082 15.6086L19.4522 14.1146" stroke-width="0.8" stroke-miterlimit="10" stroke-linecap="round"/>
+                                  <path d="M20.0703 16.9286L21.1143 15.4406" stroke-width="0.8" stroke-miterlimit="10" stroke-linecap="round"/>
+                                  <path d="M28.5723 18.1466C25.7403 20.6006 25.8423 23.4686 25.8423 23.4686" stroke-width="0.4" stroke-miterlimit="10"/>
+                                  <path d="M1 0.752 22.2686C10.752 22.2686 13.098 19.0226 15.882 18.2906C18.666 17.5586 21.744 17.5526 21.744 17.5526" stroke-width="0.4" stroke-miterlimit="10" stroke-linecap="round" stroke-dasharray="0.88 0.88"/>
+                                </g>
+                              </svg>
+                              <span>Jazzówki</span>
+                            </button>
+                            <template class="category-list-template">
+                              <ul class="category-list">
+                                <li><a href="#">category 01</a></li>
+                                <li><a href="#">category 02</a></li>
+                                <li><a href="#">category 03</a></li>
+                                <li><a href="#">category 04</a></li>
+                              </ul>
+                            </template>
+                          </li>
+                          <li class="categories__list-item categories__expandable-category">
+                            <button class="dropdown-item open-category-button">
+                              <svg width="34" height="24" viewBox="0 0 34 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="category-item-icon">
+                                <g>
+                                  <path d="M4.34673 0.8806C4.63473 0.8806 5.06673 1.9306 6.64473 3.8626C8.22273 5.7946 10.5927 8.7226 12.2427 10.7086C13.6407 12.3946 15.5187 14.9626 19.1607 16.4866C22.7067 17.9746 24.0747 15.2806 24.0747 15.2806C24.0747 15.2806 25.5267 15.7666 27.0987 16.0426C28.6707 16.3186 34.1127 16.7566 32.4387 18.9406C30.7647 21.1246 22.7127 22.9606 21.1047 22.9606C19.5027 22.9606 17.3187 22.6186 16.0887 21.7306C14.8587 20.8426 12.7227 17.1586 11.7207 16.1386C10.7187 15.1186 7.59273 12.2446 6.66873 12.3526C5.74473 12.4546 5.57673 13.1026 5.51073 14.3986C5.44473 15.6946 5.71473 22.3846 5.71473 22.3846H3.93873C3.93873 22.3846 3.90273 19.1866 3.05073 15.4966C2.19873 11.8066 2.12673 12.2146 1.27473 9.0046C0.422732 5.7946 3.77073 0.8806 4.34673 0.8806Z" stroke-width="0.8" stroke-miterlimit="10" stroke-linejoin="round"/>
+                                  <path d="M1.34766 9.2746C3.59766 11.1526 5.77566 11.0986 8.05566 12.9826" stroke-width="0.8" stroke-miterlimit="10"/>
+                                  <path d="M3.89648 20.9746H5.67248" stroke-width="0.8" stroke-miterlimit="10"/>
+                                </g>
+                              </svg>
+                              <span>Czółenka</span>
+                            </button>
+                            <template class="category-list-template">
+                              <ul class="category-list">
+                                <li><a href="#">Czółenka 01</a></li>
+                                <li><a href="#">Czółenka 02</a></li>
+                                <li><a href="#">Czółenka 03</a></li>
+                                <li><a href="#">Czółenka 04</a></li>
+                              </ul>
+                            </template>
+                          </li>
+                          <li class="categories__list-item categories__expandable-category">
+                            <button class="dropdown-item open-category-button">
+                              <svg width="34" height="14" viewBox="0 0 34 14" fill="none" xmlns="http://www.w3.org/2000/svg" class="category-item-icon">
+                                <g>
+                                  <path d="M2.49745 1.2206C5.11345 2.7926 11.5754 4.9826 11.5754 4.9826C11.5754 4.9826 15.9914 6.6866 19.8134 7.4786C23.6294 8.2706 24.4754 5.5886 24.4754 5.5886C24.4754 5.5886 26.0474 6.6326 28.5734 6.6146C31.0994 6.5906 32.0834 6.5246 32.6774 7.1366C33.2714 7.7486 33.6254 8.6186 33.1454 9.6386C32.6654 10.6586 27.3674 12.8726 22.6574 12.6446C17.9474 12.4166 15.1034 11.0306 9.73345 10.5746C4.66945 10.1426 1.83745 9.9146 1.65745 9.6626C1.47745 9.4106 1.02145 7.9826 1.20145 5.1566C1.38145 2.3306 2.31745 0.926595 2.49745 1.2206Z" stroke-width="0.8" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                  <path d="M1.6582 9.6626V11.9366H10.4662L10.4422 10.7486" stroke-width="0.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                  <path d="M1.72852 2.34259C1.80052 2.37859 1.87852 2.41459 1.96852 2.45659" stroke-width="0.4" stroke-miterlimit="10" stroke-linecap="round"/>
+                                  <path d="M3.07227 2.9426C6.09027 4.2266 11.8503 6.4526 13.6143 6.9686C16.8963 7.9346 20.2263 9.06859 21.9063 8.84059C23.2923 8.65459 24.3423 7.9586 25.0743 6.8426" stroke-width="0.4" stroke-miterlimit="10" stroke-linecap="round" stroke-dasharray="0.87 0.87"/>
+                                  <path d="M25.3867 6.3206C25.4287 6.2426 25.4647 6.1646 25.5007 6.0806" stroke-width="0.4" stroke-miterlimit="10" stroke-linecap="round"/>
+                                </g>
+                              </svg>
+                              <span>Baleriny</span>
+                            </button>
+                            <template class="category-list-template">
+                              <ul class="category-list">
+                                <li><a href="#">Baleriny 01</a></li>
+                                <li><a href="#">Baleriny 02</a></li>
+                                <li><a href="#">Baleriny 03</a></li>
+                                <li><a href="#">Baleriny 04</a></li>
+                              </ul>
+                            </template>
+                          </li>
+                          <li class="categories__list-item categories__expandable-category">
+                            <button class="dropdown-item open-category-button">
+                              <svg width="36" height="37" viewBox="0 0 36 37" fill="none" xmlns="http://www.w3.org/2000/svg" class="category-item-icon">
+                                <g>
+                                  <path d="M27.7323 22.9166C27.7323 22.9166 29.1003 22.8806 30.6003 22.4246C32.1003 21.9626 34.8003 20.9066 34.8003 20.9066V21.9986C34.8003 21.9986 32.3763 23.5706 29.8923 24.2846C28.3563 24.7226 26.3043 25.0046 23.6043 25.0046C20.9043 25.0046 14.5923 24.0506 12.7503 24.1826C10.9083 24.3146 4.59034 24.7586 2.20234 23.5646C1.42234 23.1746 1.89634 20.3246 2.06434 20.1506C2.23234 19.9766 4.08034 20.5286 6.53434 20.3906" stroke-width="0.8" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                  <path d="M8.09408 14.9066C6.94208 13.8206 5.60408 13.2566 4.08008 12.8486C4.11608 13.4546 4.15808 14.0606 4.19408 14.6666C4.27208 15.3446 4.27208 15.8726 4.27208 16.5746C6.91808 18.1646 7.09208 21.5126 7.59608 24.3746" stroke-width="0.8" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                  <path d="M11.5933 24.2546C11.1313 21.8246 10.6333 19.5386 9.69727 17.2466" stroke-width="0.8" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                  <path d="M27.469 24.7646C27.469 24.7646 28.243 20.6606 28.039 19.5026C26.947 18.7886 25.105 18.0326 23.263 17.2526C21.895 20.1266 18.043 24.3746 18.043 24.3746" stroke-width="0.8" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                  <path d="M15.7622 12.8486L16.5122 15.4106C16.5122 15.4106 10.5902 17.0726 9.72024 17.2526C8.59224 17.4926 7.53624 17.6966 7.15824 16.7066C6.78024 15.7166 7.92624 14.9846 8.77224 14.7566C9.62424 14.5226 15.7622 12.8486 15.7622 12.8486Z" stroke-width="0.8" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                  <path d="M10.7402 20.5286C10.7402 20.5286 13.7762 21.0206 15.7562 21.7886C17.7362 22.5566 19.2422 22.7486 19.2422 22.7486" stroke-width="0.8" stroke-miterlimit="10"/>
+                                  <path d="M4.14062 13.7546C5.22063 14.0306 7.47062 15.4826 7.47062 15.4826" stroke-width="0.4" stroke-miterlimit="10" stroke-linecap="round"/>
+                                </g>
+                              </svg>
+                              <span>Sandały</span>
+                            </button>
+                            <template class="category-list-template">
+                              <ul class="category-list">
+                                <li><a href="#">sandały płaskie</a></li>
+                                <li><a href="#">sandały trekkingowe</a></li>
+                                <li><a href="#">sandały na koturnie</a></li>
+                                <li><a href="#">sandały na szpilce</a></li>
+                              </ul>
+                            </template>
+                          </li>
+                          <li class="categories__list-item categories__expandable-category">
+                            <button class="dropdown-item open-category-button">
+                              <svg width="36" height="37" viewBox="0 0 36 37" fill="none" xmlns="http://www.w3.org/2000/svg" class="category-item-icon">
+                                <g>
+                                  <path d="M34.4644 20.0306C32.6464 20.3546 31.0924 20.5166 29.3464 20.6786C28.3864 20.7686 28.0684 20.6786 28.0684 20.6786" stroke-width="0.8" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                  <path d="M34.4641 20.0306C34.4641 20.0306 34.9201 21.0686 34.2361 21.6686C30.1021 25.1606 22.4161 23.3006 20.8621 23.0966C19.3081 22.8926 17.5441 22.9346 16.8541 23.0306C16.1641 23.1266 10.4581 23.8586 6.38411 23.4746C4.96811 23.3486 4.13411 23.4146 2.54411 23.0306C1.99211 22.8986 1.82411 21.5366 1.97411 20.4506C2.58611 20.3906 4.75211 20.6006 6.46211 20.5586C8.17211 20.5166 13.6501 20.0366 14.5321 20.0366C15.4141 20.0366 17.3881 20.1626 17.3881 20.1626" stroke-width="0.8" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                  <path d="M15.0059 23.0426C15.0059 23.0426 20.2619 16.8146 22.5539 12.9986C22.5539 12.9986 27.7739 16.2086 28.2359 16.8206C28.6739 19.5086 27.3599 23.6786 27.3599 23.6786" stroke-width="0.8" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                  <path d="M16.8535 23.0306C16.8535 23.0306 19.4935 19.8686 20.5795 18.3326C21.6595 16.7966 23.8015 13.7726 23.8015 13.7726" stroke-width="0.4" stroke-miterlimit="10" stroke-linecap="round" stroke-dasharray="0.88 0.88"/>
+                                  <path d="M26.9817 16.1666C26.9817 16.1666 27.1617 17.4626 26.8377 20.0306C26.5077 22.5986 25.7637 23.6726 25.7637 23.6726" stroke-width="0.4" stroke-miterlimit="10" stroke-linecap="round" stroke-dasharray="0.88 0.88"/>
+                                </g>
+                              </svg>
+                              <span>Klapki</span>
+                            </button>
+                            <template class="category-list-template">
+                              <ul class="category-list">
+                                <li><a href="#">Klapki zielone</a></li>
+                                <li><a href="#">Klapki czerwone</a></li>
+                                <li><a href="#">Klapki czarne</a></li>
+                                <li><a href="#">Klapki niebieskie</a></li>
+                              </ul>
+                            </template>
+                          </li>
+                          <li class="categories__list-item categories__expandable-category">
+                            <button class="dropdown-item open-category-button">
+                              <svg width="36" height="37" viewBox="0 0 36 37" fill="none" xmlns="http://www.w3.org/2000/svg" class="category-item-icon">
+                                <g>
+                                  <path d="M4.47091 7.4846C4.47091 7.4846 8.90491 8.8106 11.4969 8.4866C14.0889 8.1686 16.3809 7.8266 16.3809 7.8266C16.3809 7.8266 18.7749 14.9006 20.1429 17.3126C21.5109 19.7246 24.1449 21.8846 25.3089 22.4186C26.7909 23.0966 28.6569 23.2286 31.2489 23.5526C33.8409 23.8766 34.1169 25.8506 34.1169 26.7146C34.1169 27.5786 29.6769 28.5266 25.6869 28.8986C21.8649 29.2586 20.5629 28.8926 18.0489 27.6986C15.3429 26.4086 14.0589 24.7946 11.5569 23.4746C9.05491 22.1546 2.25091 20.8046 2.25091 20.8046C2.25091 20.8046 1.81891 19.1786 2.04691 16.9946C2.17891 15.7286 3.62491 12.5726 3.94291 11.4506C4.26091 10.3286 4.47091 7.4846 4.47091 7.4846Z" stroke-width="0.8" stroke-miterlimit="10" stroke-linejoin="round"/>
+                                  <path d="M8.766 22.2806V29.8946H3.834L2.25 20.7986" stroke-width="0.8" stroke-miterlimit="10" stroke-linejoin="round"/>
+                                  <path d="M8.76758 23.8946C9.60758 24.0026 10.7536 24.3686 13.3096 26.2826C15.8656 28.1966 16.9276 28.8986 19.3036 29.7206C22.0336 30.6686 24.8116 30.3386 27.4516 29.9846C31.0696 29.5046 32.9176 28.8566 34.5496 28.1426C34.5496 27.3206 34.5496 26.5046 34.5496 26.5046" stroke-width="0.8" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                  <path d="M7.3457 8.1146C7.3457 8.1146 7.7537 15.3146 8.8937 17.1566C9.6137 18.3266 12.9977 19.5566 15.0197 19.1426C16.7237 18.7946 15.7517 17.1566 14.2817 12.4466C13.4777 9.8666 13.0877 8.2406 13.0877 8.2406" stroke-width="0.4" stroke-miterlimit="10" stroke-linejoin="round"/>
+                                </g>
+                              </svg>
+                              Botki
+                            </button>
+                            <template class="category-list-template">
+                              <ul class="category-list">
+                                <li><a href="#">sztyblety</a></li>
+                                <li><a href="#">botki na obcasie</a></li>
+                                <li><a href="#">botki płaskie</a></li>
+                                <li><a href="#">botki kowbojki</a></li>
+                                <li><a href="#">botki na słupku</a></li>
+                                <li><a href="#">botki na szpilce</a></li>
+                                <li><a href="#">botki sznurowane</a></li>
+                                <li><a href="#">botki ocieplane</a></li>
+                                <li><a href="#">workery</a></li>
+                                <li><a href="#">botki jesienne</a></li>
+                                <li><a href="#">botki dziurkowane</a></li>
+                                <li><a href="#">botki zimowe</a></li>
+                                <li><a href="#">botki wiosenne</a></li>
+                                <li><a href="#">botki na koturnie</a></li>
+                              </ul>
+                            </template>
+                          </li>
+                          <li class="categories__list-item categories__expandable-category">
+                            <button class="dropdown-item open-category-button">
+                              <svg width="36" height="37" viewBox="0 0 36 37" fill="none" xmlns="http://www.w3.org/2000/svg" class="category-item-icon">
+                                <g>
+                                  <path d="M5.85056 18.6086C5.31656 19.9886 4.50656 21.5966 3.94256 24.1106C3.38456 26.6306 3.90656 27.1466 4.30856 27.5966C5.16056 28.5506 10.4886 28.7186 12.5826 29.9306C15.3786 31.5506 17.1246 33.8666 20.2086 34.5146C23.2926 35.1626 27.1386 33.9686 28.9086 33.2126C30.7926 32.4026 32.2566 31.8566 32.4546 30.8006C32.6586 29.7446 31.6866 28.7726 29.6166 28.5326C27.5466 28.2866 25.6026 28.8146 24.7506 28.4486C23.8986 28.0826 21.3846 26.2166 20.1666 24.0266C18.9486 21.8366 18.8406 18.5546 18.9486 14.6606C19.0566 10.7666 19.4766 2.9846 19.4766 2.9846C19.4766 2.9846 16.7346 1.4426 13.9206 1.8086C10.1886 2.2946 7.39256 2.7386 5.04056 3.0686C4.67456 5.9066 5.48456 7.4486 5.97056 10.1246C6.45656 12.8006 6.38456 17.2346 5.85056 18.6086Z" stroke-width="0.8" stroke-miterlimit="10"/>
+                                  <path d="M10.0324 29.0066L9.61842 35.4626C9.61842 35.4626 5.00442 35.9546 4.49442 35.2646C3.98442 34.5746 3.73242 26.4746 3.73242 26.4746" stroke-width="0.8" stroke-miterlimit="10"/>
+                                  <path d="M9.9375 30.5606C9.9375 30.5606 11.3955 30.7346 12.3375 31.3946C13.2795 32.0486 17.3835 35.1086 19.0095 35.6366C20.6355 36.1646 23.3115 36.2546 25.2135 35.8346C28.8195 35.0426 32.1015 33.1526 32.4795 32.5706C33.1635 31.5146 32.4555 30.8066 32.4555 30.8066" stroke-width="0.8" stroke-miterlimit="10"/>
+                                  <path d="M12.457 2.0066C12.457 2.0066 13.615 22.4726 14.221 25.6346C14.827 28.7966 16.327 32.6246 16.327 32.6246" stroke-width="0.4" stroke-miterlimit="10" stroke-linejoin="round"/>
+                                  <path d="M11.6055 2.0066C11.6055 2.0066 12.7635 22.4726 13.3695 25.6346C13.9755 28.7966 15.2055 31.8986 15.2055 31.8986" stroke-width="0.4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="0.79 0.79"/>
+                                  <path d="M5.96484 18.2306C8.26284 19.0046 12.4088 24.4886 13.7948 25.2866C16.4108 26.7926 18.0548 26.8526 19.0268 26.1806C19.9988 25.5086 19.6448 22.8506 19.6448 22.8506" stroke-width="0.4" stroke-miterlimit="10" stroke-linejoin="round"/>
+                                  <path d="M5.37695 7.5086C7.53095 7.5086 10.753 6.6446 13.543 6.6446C16.333 6.6446 19.249 7.5086 19.249 7.5086" stroke-width="0.4" stroke-miterlimit="10" stroke-linejoin="round"/>
+                                </g>
+                              </svg>
+                              Kozaki
+                            </button>
+                            <template class="category-list-template">
+                              <ul class="category-list">
+                                <li><a href="#">Kozaki 01</a></li>
+                                <li><a href="#">Kozaki 02</a></li>
+                                <li><a href="#">Kozaki 03</a></li>
+                                <li><a href="#">Kozaki 04</a></li>
+                              </ul>
+                            </template>
+                          </li>
+                          <li class="categories__list-item categories__expandable-category">
+                            <button class="dropdown-item open-category-button">
+                              <svg width="36" height="37" viewBox="0 0 36 37" fill="none" xmlns="http://www.w3.org/2000/svg" class="category-item-icon">
+                                <g>
+                                  <path d="M22.8726 20.4566C27.0048 20.4566 30.3546 17.1068 30.3546 12.9746C30.3546 8.8424 27.0048 5.4926 22.8726 5.4926C18.7404 5.4926 15.3906 8.8424 15.3906 12.9746C15.3906 17.1068 18.7404 20.4566 22.8726 20.4566Z" stroke-width="0.8" stroke-miterlimit="10" stroke-linecap="round"/>
+                                  <path d="M18.7266 11.0066C18.7266 9.7406 19.4406 8.8946 20.4846 8.8946C21.5226 8.8946 22.2426 9.7286 22.2426 11.0066C22.2426 12.2846 21.5166 13.1186 20.4846 13.1186C19.4406 13.1246 18.7266 12.2786 18.7266 11.0066ZM21.6846 11.0066C21.6846 9.9926 21.2046 9.3926 20.4846 9.3926C19.7526 9.3926 19.2846 10.0046 19.2846 11.0066C19.2846 12.0086 19.7526 12.6206 20.4846 12.6206C21.2106 12.6206 21.6846 12.0206 21.6846 11.0066ZM25.2006 8.9486H25.8546L20.5326 16.7366H19.8786L25.2006 8.9486ZM23.5026 14.6786C23.5026 13.4126 24.2286 12.5666 25.2606 12.5666C26.3046 12.5666 27.0186 13.4126 27.0186 14.6786C27.0186 15.9446 26.3046 16.7906 25.2606 16.7906C24.2226 16.7966 23.5026 15.9506 23.5026 14.6786ZM26.4606 14.6786C26.4606 13.6766 25.9926 13.0646 25.2606 13.0646C24.5346 13.0646 24.0606 13.6646 24.0606 14.6786C24.0606 15.6926 24.5406 16.2926 25.2606 16.2926C25.9926 16.2926 26.4606 15.6806 26.4606 14.6786Z"/>
+                                  <path d="M5.67691 13.6106C4.99291 13.8866 2.20891 17.7986 3.48091 21.5306C3.73291 23.0246 10.7409 24.2006 13.7769 26.9366C16.8129 29.6726 16.2069 29.8346 18.0249 31.2446C19.8429 32.6546 25.0929 32.0366 27.5049 31.4006C29.9169 30.7646 32.4129 29.8586 33.3669 28.8566C34.3209 27.8546 33.5349 26.2166 31.4169 25.3946C29.2989 24.5726 26.3649 23.5766 26.3649 23.5766C26.3649 23.5766 23.7249 25.8986 21.2229 25.4426C18.7209 24.9866 15.2589 21.4886 12.1209 18.8906C8.98292 16.2926 6.36091 13.3346 5.67691 13.6106Z" stroke-width="0.8" stroke-miterlimit="10"/>
+                                  <path d="M9.99108 24.4886L9.12708 30.9866C9.12708 30.9866 4.27308 31.4966 3.73908 30.4946C3.20508 29.4986 3.20508 20.2106 3.20508 20.2106" stroke-width="0.8" stroke-miterlimit="10"/>
+                                  <path d="M3.74414 28.9526H9.39614" stroke-width="0.8" stroke-miterlimit="10"/>
+                                </g>
+                              </svg>
+                              Outlet
+                            </button>
+                            <template class="category-list-template">
+                              <ul class="category-list">
+                                <li><a href="#">category 01</a></li>
+                                <li><a href="#">category 02</a></li>
+                                <li><a href="#">category 03</a></li>
+                                <li><a href="#">category 04</a></li>
+                              </ul>
+                            </template>
+                          </li>
+                          <li class="categories__list-item">
+                            <a class="dropdown-item" href="#">
+                              Pokaż wszystkie
+                            </a>
+                          </li>
+                        </ul>
+                        <!-- Categories Submenu -->
+                        <div class="mobile-hide" id="categories__submenu">
+                          <div id="categories__submenu-container">
+                            <!-- Category Submenu Placeholder -->
+                          </div>
+                          <div class="categories__submenu-img">
+                            <img src="/menu-image.webp" alt="buty damskie">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  
+                  <!-- Nav Links -->
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="#">Bony podarunkowe</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Nowości</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Bestsellery</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Wyprzedaż</a>
+                  </li>
+                  <li class="mobile-nav-item">
+                    <a class="nav-link" href="#">Zaloguj / Zarejestruj</a>
+                  </li>
+                  <li class="mobile-nav-item">
+                    <a class="nav-link" href="#">Schowek</a>
+                  </li>
+                  <li class="mobile-nav-item">
+                    <a class="nav-link" href="#">Koszyk</a>
+                  </li>
+                  <li class="mobile-nav-contact">
+                      <address>
+                        <a href="tel:+48000000000">(+48) 000 000 000</a><br/>
+                        <a href="mailto:sklep@kontakt.com.pl">sklep@kontakt.com.pl</a>
+                      </address>
+                      <hr>
+                      <ul class="social-media">
+                        <li>
+                          <a href="#"><img src="/icons/socialmedia/facebook.svg" alt="Facebook logo"></a>
+                        </li>
+                        <li>
+                          <a href="#"><img src="/icons/socialmedia/instagram.svg" alt="Instagram logo"></a>
+                        </li>
+                        <li>
+                          <a href="#"><img src="/icons/socialmedia/facebook.svg" alt="TikTok logo"></a>
+                        </li>
+                      </ul>
+                  </li>
+                </ul>
+              </div>
             </div>
+            <!-- Search form -->
+            <form class="search-form" role="search" >
+              <div class="search-form__container">
+                <input class="search-form__input" type="search" placeholder="Wyszukaj" aria-label="Search"/>
+                <button class="search-form__button" type="submit">
+                  <img src="/icons/search.svg" alt="search icon">
+                </button>
+              </div>
+            </form>
             <!-- User Panel Icons Navigation -->
-            <div>
-              <ul class="navbar-nav">
+            <div class="nav-social-media">
+              <ul class="nav-social-media__list">
                 <li class="nav--icon-link">
                   <a href="#"><img src="/icons/user.svg" alt="user icon"></a>
                 </li>
@@ -69,12 +356,18 @@
                 </li>
               </ul>
             </div>
+            <!-- Mobile Nav Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation" id="offcanvasNavbarToggleBtn">
+              <div class="navbar-toggler__bg">
+                <div class="navbar-toggler-icon"></div>
+              </div>
+            </button>
           </div>
         </nav>
       </header>
       <main>
         <!-- Intro Section -->
-        <section id="intro" class="section">
+        <section id="intro" class="section ">
           <div class="intro-carousel">
             <div style="background-image: url('/intro01.webp');" class="intro-carousel__item">
               your content 1
