@@ -7,7 +7,9 @@
 
     .intro-carousel__item {
       height: 520px;
-      padding: 3rem;
+      padding-left: 1rem;
+      padding-right: 3rem;
+      padding-block: 20px;
       border-radius: 1rem;
       display: flex;
       flex-direction: column;
@@ -15,6 +17,10 @@
       align-items: start;
       color: white;
       gap: 12px;
+
+      @media @tablet {
+        padding: 3rem;
+      }
 
       @media @desktop-small {
         flex-direction: row;
