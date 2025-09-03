@@ -113,22 +113,43 @@ $( () => {
     infinite: true,
     dots: true,
     slidesToShow: 4,
-    slidesToScroll: 4,
+    slidesToScroll: 3,
+    appendArrows: $("#promoted-carousel-controls"),
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 1200,
         settings: {
           slidesToShow: 3,
-          slidesToScroll: 3,
+          slidesToScroll: 2,
+        }
+      },
+      {
+        breakpoint: 800,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
         }
       },
       {
         breakpoint: 640,
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          centerMode: true,
+          centerPadding: "20%",
+          dots: false,
         }
-      }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          centerMode: true,
+          centerPadding: "32px",
+          dots: false,
+        }
+      },
     ]
   });
 

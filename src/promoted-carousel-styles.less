@@ -1,0 +1,98 @@
+#promoted {
+  // setting different width comparing to standard section to adjust promoted section width to 6px margin of carousel items
+  position: relative;
+  max-width: 1412px;
+  margin-inline: 1rem;
+
+  @media @tablet {
+    margin-inline: 18px;
+  }
+
+  @media @desktop-small {
+    margin-inline: 42px;
+  }
+
+  @media @desktop-large {
+    margin-inline: auto;
+  }
+
+  .promoted-header {
+    margin-inline: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-block: 3.5rem;
+  }
+
+  .promoted-carousel {
+    padding-bottom: 2rem;
+
+    .card {
+      margin-inline: 6px;
+      border: none;
+
+      img {
+        border-radius: 1rem;
+      }
+
+      .card-body {
+        padding-inline: 4px;
+        padding-block: 8px;
+
+        .card-title {
+          font-size: 15px;
+          font-weight: 500;
+          margin-bottom: 4px;
+        }
+
+        .card__text_small {
+          font-size: 13px;
+          margin-bottom: 4px;
+        }
+
+        .card-price {
+          color: var(--blue-main);
+          font-size: 15px;
+          font-weight: 600;
+        }
+
+        .card-price__discount {
+          background-color: #C40837;
+          color: white;
+          font-size: 15px;
+          font-weight: 600;
+          padding-inline: 4px;
+          padding-block: 1px;
+        }
+
+         .card-price__previous {
+          color: grey;
+          font-size: 15px;
+          font-weight: 500;
+          text-decoration: line-through;
+          margin-left: 8px;
+        }
+
+        .card__text_smaller {
+          font-size: 12px;
+          margin-top: 4px;
+        }
+      }
+    }
+  }
+
+  #promoted-carousel-controls {
+    .slick-prev {
+      left: 1rem;
+      width: 2rem;
+      height: 2rem;
+    }
+
+    .slick-next {
+      right: 1rem;
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+
+}
