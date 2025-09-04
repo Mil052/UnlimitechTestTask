@@ -41,6 +41,10 @@ export default defineConfig({
     inject({
       $: 'jquery',
       jQuery: 'jquery',
+      include: [
+        'src/*.js',
+        'src/**/*.js',
+      ],
     }),
   ],
   optimizeDeps: {

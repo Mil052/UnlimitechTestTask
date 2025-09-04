@@ -4,9 +4,6 @@ import * as bootstrap from 'bootstrap';
 import './slick/slick.min.js';
 
 $( () => {
-  // Jquery Test
-  $('#app').text('jQuery is working');
-
   const offcanvasNavbarToggleBtn = $('#offcanvasNavbarToggleBtn');
     // Offcanvas Header
   const offcanvasNavbar = $("#offcanvasNavbar");
