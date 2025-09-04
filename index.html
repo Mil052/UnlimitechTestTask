@@ -596,20 +596,26 @@
         </section>
         <section id="discount-banner" class="section">
           <div class="discount-banner__layout">
-            <div>
+            <div class="discount-banner__header">
               <h4>Chcesz otrzymać 5% zniżki na swoje zakupy?</h4>
               <p>
                 Zapisz się do naszego newslettera i jako pierwsza dowiedz się o nowościach, promocjach i ofertach specjalnych!
               </p>
             </div>
-            <form action="#">
-              <div>
-                <input type="email" name="email" id="email" placeholder="Twój adres email">
-                <button type="submit">Wyślij</button>
+            <form action="#" class="discount-banner__form">
+              <div class="discount-banner__form-email">
+                <input type="email" name="email" id="email" placeholder="Twój adres email" class="discount-banner__form-input">
+                <button type="submit" class="discount-banner__form-btn">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2 18.2635L18.2635 2M18.2635 2L18.2636 14.7278M18.2635 2L6.24274 2.707" stroke="white" stroke-width="2"/>
+                  </svg>
+                </button>
               </div>
-              <div>
+              <div class="discount-banner__form-aprove">
                 <input type="checkbox" name="approve-regulations" id="approve-regulations">
-                <label for="approve-regulations">Akceptuję Regulamin i Politykę Prywatności.</label>
+                <label for="approve-regulations">
+                  Akceptuję Regulamin i Politykę Prywatności.
+                </label>
               </div>
             </form>
           </div>
