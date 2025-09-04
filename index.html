@@ -621,7 +621,7 @@
           </div>
         </section>
       </main>
-      <footer class="section">
+      <footer class="section" id="footer">
         <div class="footer-content">
           <nav class="accordion" id="footer-navigation">
             <div class="accordion-item">
@@ -689,12 +689,18 @@
             </div>
           </nav>
           <div id="footer-address">
-            <h4>Skontaktuj się z nami.</h4>
+            <h4 class="footer-address__title">Skontaktuj się z nami.</h4>
             <address>
-              <a href="tel:+48000000000">(+48) 000 000 000</a><br/>
-              <a href="mailto:sklep@kontakt.com.pl">sklep@kontakt.com.pl</a><br/>
-              <div>
-                Jesteśmy do Twojej dyspozycji od poniedziałku do piątku w godzinach 8:00 - 16:00
+              <a href="tel:+48000000000" class="footer-address__link">
+                (+48) 000 000 000
+              </a>
+              <a href="mailto:sklep@kontakt.com.pl" class="footer-address__link">
+                sklep@kontakt.com.pl
+              </a>
+              <div class="footer-address__info">
+                Jesteśmy do Twojej dyspozycji<br/>
+                od poniedziałku do piątku<br/>
+                w godzinach 8:00 - 16:00
               </div>
             </address>
           </div>
@@ -707,34 +713,41 @@
               <li class="payment-delivery__option">
                 <a href=""><img src="/delivery-and-payment/inpost_kurier.png" alt="kurier InPost logo"></a>
               </li>
-              <li>
+              <li class="payment-delivery__option">
                 <a href=""><img src="/delivery-and-payment/inpost_paczkomat.png" alt="paczkomat InPost logo"></a>
               </li>
-              <li>
+              <li class="payment-delivery__option">
                 <a href=""><img src="/delivery-and-payment/blik.png" alt="Blik logo"></a>
               </li>
-              <li>
+              <li class="payment-delivery__option">
                 <a href=""><img src="/delivery-and-payment/przelewy24.png" alt="Przelewy24 logo"></a>
               </li>
-              <li>
+              <li class="payment-delivery__option">
                 <a href=""><img src="/delivery-and-payment/paypo.png" alt="PayPo logo"></a>
               </li>
-              <li>
+              <li class="payment-delivery__option">
                 <a href=""><img src="/delivery-and-payment/paypal.png" alt="PayPal logo"></a>
               </li>
             </ul>
           </div>
-          <div>
+          <hr class="mobile-separator">
+          <div class="social-media">
             <h4>Social media</h4>
-            <ul class="social-media">
+            <ul class="social-media__list">
               <li>
-                <a href="#"><img src="/icons/socialmedia/facebook.svg" alt="Facebook logo"></a>
+                <a href="#">
+                  <img src="/icons/socialmedia/facebook.svg" alt="Facebook logo">
+                </a>
               </li>
               <li>
-                <a href="#"><img src="/icons/socialmedia/instagram.svg" alt="Instagram logo"></a>
+                <a href="#">
+                  <img src="/icons/socialmedia/instagram.svg" alt="Instagram logo">
+                </a>
               </li>
               <li>
-                <a href="#"><img src="/icons/socialmedia/facebook.svg" alt="TikTok logo"></a>
+                <a href="#">
+                  <img src="/icons/socialmedia/facebook.svg" alt="TikTok logo">
+                </a>
               </li>
             </ul>
           </div>
