@@ -1,7 +1,10 @@
 import './style.css';
+import $ from 'jquery';
 import * as bootstrap from 'bootstrap';
 // https://kenwheeler.github.io/slick/
-import './slick/slick.min.js';
+import '@slick/slick.min.js';
+
+window.$ = window.jQuery = $;
 
 $( () => {
   const offcanvasNavbarToggleBtn = $('#offcanvasNavbarToggleBtn');
@@ -149,5 +152,4 @@ $( () => {
       },
     ]
   });
-
 });

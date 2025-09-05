@@ -1,16 +1,22 @@
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { defineConfig } from 'vite';
-import inject from "@rollup/plugin-inject";
 
 // https://vite.dev/guide/build.html#multi-page-app
 // Setting rewrite rule for index.html when path has trailing slash or don't have it
 // https://stackoverflow.com/questions/79348016/vue-router-returns-a-404-on-refresh-of-a-vite-mpa-app
 
+// https://vite.dev/guide/dep-pre-bundling.html#monorepos-and-linked-dependencies
+
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig({
   appType: 'mpa',
+  resolve: {
+    alias: {
+      "@slick": resolve(__dirname, 'src/slick'),
+    },
+  },
   build: {
     rollupOptions: {
       input: {
@@ -19,6 +25,9 @@ export default defineConfig({
         nowosci: resolve(__dirname, 'nowosci/index.html'),
         promocje: resolve(__dirname, 'promocje/index.html'),
       },
+    },
+    commonjsOptions: {
+      include: [ /jquery/, /slick\/slick.min.js/ ],
     },
   },
   server: {
@@ -37,18 +46,8 @@ export default defineConfig({
       },
     }
   },
-  plugins: [
-    inject({
-      $: 'jquery',
-      jQuery: 'jquery',
-      include: [
-        'src/*.js',
-        'src/**/*.js',
-      ],
-    }),
-  ],
   optimizeDeps: {
-      include: ["jquery"],
+    include: ["jquery", "@slick/slick.min.js"],
   },
   css: {
      preprocessorOptions: {
