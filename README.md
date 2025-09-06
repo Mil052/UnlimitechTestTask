@@ -8,4 +8,4 @@ Projekt zasetupowany w Vite.
 3. Uruchom lokalny serwer deweloperski  
   _npm run dev_
 
-Uwaga: Aplikacja działa tylko na środowisku deweloperskim (z uwagi na brak czasu nie przygotowłem odpowiedniej konfiguracji dla builda, podczas builda nie jest dołączany modułjQuery - do poprawienia w wolnej chwili)
+06.09.2025 Kliknij [link](https://mil052.github.io/UnlimitechTestTask) aby wyświetlić stronę na GitHub Pages.
