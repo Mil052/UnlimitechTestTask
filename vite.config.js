@@ -12,6 +12,9 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig({
   appType: 'mpa',
+  // setting gitbub Pages repository name as base path
+  // https://ucilasmana.medium.com/deploying-a-static-vite-app-on-github-pages-with-github-actions-03a67bb9ac4e
+  base: '/UnlimitechTestTask/',
   resolve: {
     alias: {
       "@slick": resolve(__dirname, 'src/slick'),
